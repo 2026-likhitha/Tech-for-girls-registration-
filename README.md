@@ -32,7 +32,20 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js"></script><script>
+  let shareCount = 0;
+
+  document.getElementById("whatsappShare").addEventListener("click", function () {
+    const message = "Hey! Register now for the Tech for Girls event! 🚀\nhttps://2026-likhitha.github.io/Tech-for-girls-registration-/";
+    const url = "https://wa.me/?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+    // Update share count
+    shareCount++;
+    document.getElementById("shareCount").textContent = `Shared: ${shareCount} times`;
+  });
+</script>
 </body>
 </html>
 .container {
