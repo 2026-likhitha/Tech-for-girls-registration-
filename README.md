@@ -87,3 +87,17 @@ button:disabled {
   font-size: 14px;
   text-align: center;
 }
+let shareCount = localStorage.getItem("whatsappShareCount") || 0;
+document.getElementById("shareCount").innerText = `Shared: ${shareCount} times`;
+
+document.getElementById("whatsappShare").addEventListener("click", () => {
+  const message = encodeURIComponent("Check out Tech For Girls Registration Page!");
+  const url = encodeURIComponent(window.location.href);
+  const whatsappUrl = `https://wa.me/?text=${message}%20${url}`;
+
+  window.open(whatsappUrl, "_blank");
+
+  shareCount++;
+  localStorage.setItem("whatsappShareCount", shareCount);
+  document.getElementById("shareCount").innerText = `Shared: ${shareCount} times`;
+});
