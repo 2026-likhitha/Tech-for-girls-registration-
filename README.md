@@ -81,7 +81,16 @@ button {
 button:disabled {
   background-color: #6c757d;
 }
+document.getElementById("whatsappShare").addEventListener("click", function () {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const age = document.getElementById("age").value;
 
+  const message = `Tech For Girls Registration:\n\nName: ${name}\nEmail: ${email}\nAge: ${age}`;
+  const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+
+  this.href = url;
+});
 .whatsapp-share p {
   margin-top: 10px;
   font-size: 14px;
