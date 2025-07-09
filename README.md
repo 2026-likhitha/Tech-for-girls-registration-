@@ -45,6 +45,20 @@
     shareCount++;
     document.getElementById("shareCount").textContent = `Shared: ${shareCount} times`;
   });
+</script><script>
+let shareCount = 0;
+
+document.getElementById("whatsappShare").addEventListener("click", function () {
+  const message = encodeURIComponent("Register for the Tech for Girls event here: https://2026-likhitha.github.io/Tech-for-girls-registration-/");
+  const whatsappURL = `https://wa.me/?text=${message}`;
+
+  // Open WhatsApp in new tab
+  window.open(whatsappURL, "_blank");
+
+  // Update share count
+  shareCount++;
+  document.getElementById("shareCount").textContent = `Shared: ${shareCount} times`;
+});
 </script>
 </body>
 </html>
