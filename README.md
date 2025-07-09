@@ -35,3 +35,55 @@
   <script src="script.js"></script>
 </body>
 </html>
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #d63384;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #20c997;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #6c757d;
+}
+
+.whatsapp-share p {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
